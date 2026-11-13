@@ -64,14 +64,6 @@ def _is_vague(text: str) -> bool:
     return len(words) > 0 and len(words) <= 3
 
 
-def _assume_age(brief: Brief, age: tuple[int, int], assumption: str) -> None:
-    if brief.age:
-        return
-    brief.age = age
-    brief.ageSource = "assumed"
-    brief.assumptions.append(assumption)
-
-
 def _detect_product(text: str, brief: Brief) -> None:
     lower = text.lower()
 
@@ -83,7 +75,6 @@ def _detect_product(text: str, brief: Brief) -> None:
         brief.priceTier = "value"
         _push_unique(brief.modifiers, "subscription")
         brief.assumptions.append("A starter box of toys and samples is treated as a value purchase.")
-        _assume_age(brief, (25, 40), "New cat owners are treated as roughly 25–40.")
         brief.claims.append("First months of a new cat: toys, food samples, and a short guide")
         return
 
@@ -95,13 +86,6 @@ def _detect_product(text: str, brief: Brief) -> None:
         brief.clinical = True
         if re.search(r"\b(senior|older)\b|\bjoint\b", lower):
             brief.product = "Premium senior dog food" if re.search(r"premium", lower) else "Senior dog food"
-            _assume_age(brief, (30, 65), "Senior-dog owners are treated as roughly 30–65.")
-        elif re.search(r"\baging\b", lower):
-            _assume_age(
-                brief,
-                (30, 65),
-                "Aging dogs are treated as a senior-owner audience, roughly 30–65. The advertiser did not say senior.",
-            )
         if re.search(r"premium|vet|grain[-\s]?free|joint|orthopedic|hips?", lower):
             brief.priceTier = "premium"
         if re.search(r"joint", lower):
@@ -140,7 +124,6 @@ def _detect_product(text: str, brief: Brief) -> None:
         brief.wellness = True
         _push_unique(brief.modifiers, "wellness")
         brief.priceTier = "mid"
-        _assume_age(brief, (22, 40), "Functional-drink buyers are treated as roughly 22–40.")
         brief.claims.append("A sparkling, non-alcoholic drink with adaptogens")
         if re.search(r"hangover|feel good", lower):
             brief.claims.append("Meant to feel good without a hangover")
@@ -166,7 +149,6 @@ def _detect_product(text: str, brief: Brief) -> None:
         brief.product = "Technical ski outerwear"
         _push_unique(brief.cores, "outdoor")
         brief.priceTier = "luxury"
-        _assume_age(brief, (25, 50), "Backcountry skiers are treated as roughly 25–50.")
         brief.claims.append("Shells worn by patrollers, built for serious backcountry use")
         return
 
@@ -186,10 +168,8 @@ def _detect_product(text: str, brief: Brief) -> None:
     if re.search(r"handbag|purse|leather bag", lower):
         brief.product = "Custom leather handbags"
         _push_unique(brief.cores, "luxury_accessories")
-        brief.gender = "female"
         brief.priceTier = "luxury"
         brief.grownUp = True
-        _assume_age(brief, (30, 60), "A $1,200 handbag buyer is treated as roughly 30–60.")
         brief.claims.append("Italian-made, handcrafted in Florence, custom fit")
         if re.search(r"6 weeks", lower):
             brief.claims.append("Ships in about six weeks")
@@ -212,11 +192,6 @@ def _detect_product(text: str, brief: Brief) -> None:
         _push_unique(brief.modifiers, "fitness")
         brief.valuePositioning = True
         brief.priceTier = "value"
-        _assume_age(
-            brief,
-            (22, 42),
-            "Workout-supplement buyers are treated as roughly 22–42, matching this catalog's fitness audiences.",
-        )
         brief.claims.append("Pre-workout, creatine, and protein")
         if re.search(r"half the cost|compete on price", lower):
             brief.claims.append("Same formulations as expensive brands, at about half the price")
@@ -233,7 +208,6 @@ def _detect_product(text: str, brief: Brief) -> None:
             brief.claims.append("Breathable linen, made in Portugal")
         if re.search(r"grown-up|brooklinen|parachute", lower):
             brief.claims.append("A quieter alternative to the Brooklinen and Parachute look")
-        _assume_age(brief, (32, 60), "The 'grown-up bedding' buyer is treated as roughly 32–60.")
         return
 
     if re.search(r"skincare|serum|makeup|lipstick", lower):
