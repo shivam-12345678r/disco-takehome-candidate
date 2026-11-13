@@ -11,6 +11,7 @@ import streamlit as st
 
 from campaign.build import build_campaign
 from campaign.catalog import load_example_lines
+from campaign.config import suggest_learning_cpm
 from campaign.llm import has_llm_credentials, load_local_env
 from campaign.types import BudgetLine, CampaignDraft
 
@@ -471,19 +472,21 @@ def config_payload(
     config["budget"]["allocation"] = [asdict(line) for line in allocation]
     config["bidStrategy"]["steady"]["capUsd"] = target_cpa
     config["kpi"] = f"First order at or below ${target_cpa}."
-    learning_cpm = max(6, min(28, js_round(target_cpa * 0.45)))
+    learning_cpm = suggest_learning_cpm(target_cpa, draft.publishers)
     config["bidStrategy"]["learning"]["bidUsd"] = learning_cpm
     config["bidStrategy"]["learning"]["days"] = learning_days
     default_cpa = int(draft.config.bidStrategy["steady"]["capUsd"])
     if target_cpa == default_cpa:
-        rationale = draft.config.bidStrategy["rationale"]
+        original_rationale = draft.config.bidStrategy["rationale"]
+        _, cap_context = original_rationale.split(". The cap is ", 1)
+        cap_context = f"The cap is {cap_context}"
     else:
-        rationale = (
-            f"The CPA cap was edited to ${target_cpa}; check it against contribution margin before launch."
-        )
+        cap_context = "Check the CPA cap against contribution margin before launch."
     config["bidStrategy"]["rationale"] = (
-        f"{rationale} Learning uses a ${learning_cpm} CPM for {learning_days} days, "
-        "a cold-start heuristic near 45% of the CPA cap, not a performance prediction."
+        f"{learning_days} days on a ${learning_cpm} CPM while the publishers have no conversion history "
+        f"for this advertiser, then a ${target_cpa} CPA cap. {cap_context} "
+        "The learning CPM is a cold-start heuristic near 45% of the CPA cap, subject to an audience-based "
+        "floor and a $6–$28 clamp; it is not a performance prediction."
     )
     config["targeting"]["frequencyCapPerWeek"] = frequency_cap
     config["targeting"]["attributionWindowDays"] = attribution_window
@@ -689,8 +692,8 @@ def main() -> None:
             )
         st.caption(
             "The default CPA cap uses stated or assumed order value and a category allowance. "
-            "Check it against contribution margin. The learning CPM recalculates from roughly 45% "
-            "of the CPA cap, clamped to $6–$28. These are draft assumptions, not learned auction settings."
+            "Check it against contribution margin. The learning CPM uses roughly 45% of the CPA cap, "
+            "with an audience-based floor and a $6–$28 clamp. These are draft assumptions, not learned auction settings."
         )
     allocation = rescale(draft.config.budget["allocation"], monthly, base)
     config = config_payload(

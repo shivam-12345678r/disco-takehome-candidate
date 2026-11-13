@@ -51,6 +51,19 @@ def suggest_monthly_budget(brief: Brief, publisher_count: int) -> int:
     return _round_money(scaled / 500) * 500
 
 
+def suggest_learning_cpm(target_cpa: int, publishers: list[ScoredPublisher]) -> int:
+    recommended = [row for row in publishers if row.decision == "recommend"]
+    income_ranks = [row.publisher.audience.income_tier for row in recommended]
+    high_share = sum(1 for tier in income_ranks if tier == "high")
+    if income_ranks and high_share * 2 >= len(income_ranks):
+        floor = 18
+    elif any(tier in ("mid-high", "high") for tier in income_ranks):
+        floor = 12
+    else:
+        floor = 8
+    return _clamp(max(floor, _round_money(target_cpa * 0.45)), 6, 28)
+
+
 def _format_impressions(n: int) -> str:
     if n >= 1_000_000:
         digits = 0 if n >= 10_000_000 else 1
@@ -148,15 +161,7 @@ def build_config(
     else:
         take_rate = 0.22
     cap = _clamp(_round_money(order * take_rate), 12, 140)
-    income_ranks = [row.publisher.audience.income_tier for row in recommended]
-    high_share = sum(1 for tier in income_ranks if tier == "high")
-    if high_share * 2 >= len(income_ranks):
-        floor = 18
-    elif any(tier in ("mid-high", "high") for tier in income_ranks):
-        floor = 12
-    else:
-        floor = 8
-    learning_cpm = _clamp(max(floor, _round_money(cap * 0.45)), 6, 28)
+    learning_cpm = suggest_learning_cpm(cap, publishers)
 
     geos = _unique([geo for row in recommended for geo in row.publisher.audience.top_geos])
     interests = _unique(
