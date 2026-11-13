@@ -32,7 +32,16 @@ OUTPUT_TOKEN_LIMITS = {
 
 
 def _api_key() -> str | None:
-    return os.environ.get("OPENAI_API_KEY")
+    key = os.environ.get("OPENAI_API_KEY")
+    if key:
+        return key
+    try:
+        import streamlit as st
+
+        secret = st.secrets.get("OPENAI_API_KEY")
+    except (FileNotFoundError, ImportError):
+        return None
+    return secret if isinstance(secret, str) and secret else None
 
 
 def _primary_model() -> str:
