@@ -1,0 +1,8 @@
+.env*
+.venv
+.next
+node_modules
+__pycache__
+.pytest_cache
+.git
+disco-takehome-candidate-submission.zip

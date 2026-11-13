@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: disco-campaign-draft
+    runtime: docker
+    plan: free
+    healthCheckPath: /_stcore/health
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-6-luna

@@ -1,0 +1,55 @@
+{
+  "labelNotes": "Ten additional synthetic briefs manually judged for the offline ranker exercise. Labels reflect catalog reasoning only, not impressions, clicks, conversions, or campaign outcomes.",
+  "cases": [
+    {
+      "id": "ranker_31",
+      "description": "A subscription of botanical sparkling teas for women seeking non-alcoholic drinks for social occasions.",
+      "relevantPublisherIds": ["pub_020", "pub_008", "pub_001"]
+    },
+    {
+      "id": "ranker_32",
+      "description": "Value-priced meal replacement bars with oats and plant protein for commuters.",
+      "relevantPublisherIds": ["pub_008", "pub_015", "pub_001"]
+    },
+    {
+      "id": "ranker_33",
+      "description": "Premium linen pillowcases and duvet covers for a calm, minimalist bedroom.",
+      "relevantPublisherIds": ["pub_011"]
+    },
+    {
+      "id": "ranker_34",
+      "description": "Plant-based dishwashing and surface-cleaner refills that help households reduce plastic packaging.",
+      "relevantPublisherIds": ["pub_014", "pub_008", "pub_001"]
+    },
+    {
+      "id": "ranker_35",
+      "description": "Premium recycled-fabric yoga leggings for women who train several times each week.",
+      "relevantPublisherIds": ["pub_002", "pub_017", "pub_016"]
+    },
+    {
+      "id": "ranker_36",
+      "description": "A subscription for daily vitamins, creatine, and protein for adults focused on strength training.",
+      "relevantPublisherIds": ["pub_012", "pub_003", "pub_002"]
+    },
+    {
+      "id": "ranker_37",
+      "description": "Fragrance-free facial cleanser and moisturizer for people with sensitive skin.",
+      "relevantPublisherIds": ["pub_013", "pub_019"]
+    },
+    {
+      "id": "ranker_38",
+      "description": "A monthly box of durable puppy toys and treats for people adopting their first dog.",
+      "relevantPublisherIds": ["pub_007", "pub_009", "pub_018"]
+    },
+    {
+      "id": "ranker_39",
+      "description": "Luxury technical ski shells starting at $900, made for backcountry mountain guides.",
+      "relevantPublisherIds": []
+    },
+    {
+      "id": "ranker_40",
+      "description": "Handmade Italian leather tote bags priced from $1,800 for luxury shoppers.",
+      "relevantPublisherIds": []
+    }
+  ]
+}

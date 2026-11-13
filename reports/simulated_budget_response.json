@@ -1,0 +1,204 @@
+{
+  "generatedAt": "2026-11-13T14:08:18.986200+00:00",
+  "status": "simulated_not_measured",
+  "description": "Fixed-seed Poisson samples generated from arbitrary log-shaped response curves, then refit. All spend and conversion values are synthetic.",
+  "formula": "conversions(spend) = a * log(1 + spend / b)",
+  "randomSeed": 260613,
+  "orderValueUsdAssumption": 80.0,
+  "totalBudgetUsd": 12000,
+  "perPublisherCapUsd": 6000,
+  "observations": {
+    "Pawline": {
+      "spendUsd": [
+        0,
+        500,
+        1000,
+        2000,
+        3500,
+        5000,
+        6500,
+        8000
+      ],
+      "syntheticConversions": [
+        0,
+        81,
+        130,
+        256,
+        323,
+        429,
+        563,
+        547
+      ]
+    },
+    "Ruffco": {
+      "spendUsd": [
+        0,
+        500,
+        1000,
+        2000,
+        3500,
+        5000,
+        6500,
+        8000
+      ],
+      "syntheticConversions": [
+        0,
+        71,
+        128,
+        251,
+        352,
+        440,
+        484,
+        509
+      ]
+    },
+    "Pantrygood": {
+      "spendUsd": [
+        0,
+        500,
+        1000,
+        2000,
+        3500,
+        5000,
+        6500,
+        8000
+      ],
+      "syntheticConversions": [
+        0,
+        55,
+        107,
+        172,
+        325,
+        342,
+        411,
+        548
+      ]
+    },
+    "Pop & Sip": {
+      "spendUsd": [
+        0,
+        500,
+        1000,
+        2000,
+        3500,
+        5000,
+        6500,
+        8000
+      ],
+      "syntheticConversions": [
+        0,
+        60,
+        89,
+        170,
+        259,
+        321,
+        355,
+        427
+      ]
+    }
+  },
+  "fittedCurveParameters": {
+    "Pawline": {
+      "a": 388.4683026066228,
+      "b": 2373.7717731218577
+    },
+    "Ruffco": {
+      "a": 285.354842103288,
+      "b": 1485.9064960589399
+    },
+    "Pantrygood": {
+      "a": 540.5767436908062,
+      "b": 5034.333280694304
+    },
+    "Pop & Sip": {
+      "a": 296.2849579213406,
+      "b": 2592.5153678662055
+    }
+  },
+  "optimizer": {
+    "method": "allocate $100 increments to the publisher with the largest next-step fitted conversions, subject to per-publisher caps",
+    "optimizedAllocation": {
+      "allocationByPublisher": {
+        "Pawline": {
+          "spendUsd": 3700,
+          "curveImpliedConversions": 364.9658288816924,
+          "curveImpliedRevenueUsd": 29197.266310535393,
+          "marginalRoasAtStart": 13.092018601122046,
+          "marginalRoasAtAllocatedSpend": 5.116666442103787,
+          "marginalRoasForLast100Usd": 5.159255550781791
+        },
+        "Ruffco": {
+          "spendUsd": 2900,
+          "curveImpliedConversions": 308.85989425331604,
+          "curveImpliedRevenueUsd": 24708.791540265283,
+          "marginalRoasAtStart": 15.363273145928511,
+          "marginalRoasAtAllocatedSpend": 5.204941644053749,
+          "marginalRoasForLast100Usd": 5.265196415507899
+        },
+        "Pantrygood": {
+          "spendUsd": 3400,
+          "curveImpliedConversions": 278.9535848202028,
+          "curveImpliedRevenueUsd": 22316.286785616227,
+          "marginalRoasAtStart": 8.590241663400612,
+          "marginalRoasAtAllocatedSpend": 5.127392771430124,
+          "marginalRoasForLast100Usd": 5.158031141880929
+        },
+        "Pop & Sip": {
+          "spendUsd": 2000,
+          "curveImpliedConversions": 169.41553019977286,
+          "curveImpliedRevenueUsd": 13553.24241598183,
+          "marginalRoasAtStart": 9.142779606053429,
+          "marginalRoasAtAllocatedSpend": 5.161179600955837,
+          "marginalRoasForLast100Usd": 5.2182000574681755
+        }
+      },
+      "totalSpendUsd": 12000,
+      "curveImpliedConversions": 1122.1948381549842,
+      "curveImpliedRevenueUsd": 89775.58705239874,
+      "curveImpliedRoas": 7.481298921033228
+    },
+    "equalSplitBaseline": {
+      "allocationByPublisher": {
+        "Pawline": {
+          "spendUsd": 3000,
+          "curveImpliedConversions": 317.3979819769567,
+          "curveImpliedRevenueUsd": 25391.838558156538,
+          "marginalRoasAtStart": 13.092018601122046,
+          "marginalRoasAtAllocatedSpend": 5.78317530416361,
+          "marginalRoasForLast100Usd": 5.837661591685583
+        },
+        "Ruffco": {
+          "spendUsd": 3000,
+          "curveImpliedConversions": 315.2930083884232,
+          "curveImpliedRevenueUsd": 25223.440671073855,
+          "marginalRoasAtStart": 15.363273145928511,
+          "marginalRoasAtAllocatedSpend": 5.088912884902694,
+          "marginalRoasForLast100Usd": 5.1464913080857055
+        },
+        "Pantrygood": {
+          "spendUsd": 3000,
+          "curveImpliedConversions": 252.68877068853712,
+          "curveImpliedRevenueUsd": 20215.10165508297,
+          "marginalRoasAtStart": 8.590241663400612,
+          "marginalRoasAtAllocatedSpend": 5.38266686038288,
+          "marginalRoasForLast100Usd": 5.416445343769714
+        },
+        "Pop & Sip": {
+          "spendUsd": 3000,
+          "curveImpliedConversions": 227.7840455395005,
+          "curveImpliedRevenueUsd": 18222.72364316004,
+          "marginalRoasAtStart": 9.142779606053429,
+          "marginalRoasAtAllocatedSpend": 4.238306928917913,
+          "marginalRoasForLast100Usd": 4.276657452858944
+        }
+      },
+      "totalSpendUsd": 12000,
+      "curveImpliedConversions": 1113.1638065934176,
+      "curveImpliedRevenueUsd": 89053.10452747339,
+      "curveImpliedRoas": 7.421092043956116
+    },
+    "differenceInCurveImpliedConversions": 9.031031561566579
+  },
+  "plot": "reports/simulated_budget_response.png",
+  "caveat": "This shows how an optimizer can consume a response curve. It is not a performance forecast, an ML bid, or evidence that any real publisher responds this way."
+}

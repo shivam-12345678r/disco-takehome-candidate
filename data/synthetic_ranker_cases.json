@@ -1,0 +1,523 @@
+{
+  "labelNotes": "Forty synthetic, manually labeled briefs for an offline publisher-ranking baseline. A listed publisher is a positive match. Any catalog-eligible publisher not listed is treated as a negative for this experiment; this is a judgment label, not outcome data. Structured core, price tier, target age, and gender are explicit brief annotations. Publisher IDs define labels but are not predictive features. No campaign outcomes are represented.",
+  "cases": [
+    {
+      "id": "syn_01",
+      "description": "Premium senior dog food for older dogs, with joint health support.",
+      "core": "pet_food",
+      "priceTier": "premium",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_007",
+        "pub_009"
+      ]
+    },
+    {
+      "id": "syn_02",
+      "description": "A subscription starter box for new kitten owners with toys and food samples.",
+      "core": "pet_supplies",
+      "priceTier": "unknown",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_007",
+        "pub_009",
+        "pub_018"
+      ]
+    },
+    {
+      "id": "syn_03",
+      "description": "Dental chew toys for dogs that help owners keep a regular care routine.",
+      "core": "pet_supplies",
+      "priceTier": "unknown",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_007",
+        "pub_009",
+        "pub_018"
+      ]
+    },
+    {
+      "id": "syn_04",
+      "description": "Protein bars for busy people. A budget-friendly snack with 15 grams of protein.",
+      "core": "snacks",
+      "priceTier": "value",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_008",
+        "pub_015",
+        "pub_001"
+      ]
+    },
+    {
+      "id": "syn_05",
+      "description": "A premium sparkling drink with adaptogens for a non-alcoholic cocktail alternative.",
+      "core": "functional_beverage",
+      "priceTier": "premium",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_020",
+        "pub_008",
+        "pub_001"
+      ]
+    },
+    {
+      "id": "syn_06",
+      "description": "Botanical sparkling water for people who want a festive drink without alcohol.",
+      "core": "functional_beverage",
+      "priceTier": "unknown",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_020",
+        "pub_008",
+        "pub_001"
+      ]
+    },
+    {
+      "id": "syn_07",
+      "description": "Premium linen bedding made in Portugal for people who want breathable sheets.",
+      "core": "bedding",
+      "priceTier": "premium",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_011"
+      ]
+    },
+    {
+      "id": "syn_08",
+      "description": "Hand-poured soy candles with natural fragrance, mostly bought as gifts.",
+      "core": "home_fragrance",
+      "priceTier": "unknown",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_011",
+        "pub_014",
+        "pub_010"
+      ]
+    },
+    {
+      "id": "syn_09",
+      "description": "Refillable concentrated household cleaner made for people reducing single-use plastic.",
+      "core": "household_values",
+      "priceTier": "unknown",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_014",
+        "pub_008",
+        "pub_001"
+      ]
+    },
+    {
+      "id": "syn_10",
+      "description": "Premium non-toxic cookware for home cooks who care about safer materials.",
+      "core": "household_values",
+      "priceTier": "premium",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_014",
+        "pub_008"
+      ]
+    },
+    {
+      "id": "syn_11",
+      "description": "A fragrance-free face moisturizer for sensitive skin, made with plant-based ingredients.",
+      "core": "beauty",
+      "priceTier": "unknown",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_013",
+        "pub_019"
+      ]
+    },
+    {
+      "id": "syn_12",
+      "description": "Premium shampoo and conditioner for people who want a simple haircare routine.",
+      "core": "beauty",
+      "priceTier": "premium",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_013",
+        "pub_019"
+      ]
+    },
+    {
+      "id": "syn_13",
+      "description": "Workout supplements including pre-workout, creatine, and protein for active adults.",
+      "core": "supplements",
+      "priceTier": "unknown",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_012",
+        "pub_003",
+        "pub_002"
+      ]
+    },
+    {
+      "id": "syn_14",
+      "description": "A subscription for premium daily vitamins designed for women.",
+      "core": "supplements",
+      "priceTier": "premium",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_012"
+      ]
+    },
+    {
+      "id": "syn_15",
+      "description": "Affordable creatine powder with the same formulation as premium sports brands.",
+      "core": "supplements",
+      "priceTier": "value",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_012",
+        "pub_003",
+        "pub_008"
+      ]
+    },
+    {
+      "id": "syn_16",
+      "description": "Sustainable women's activewear made from recycled materials, positioned at a premium price.",
+      "core": "activewear",
+      "priceTier": "premium",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_002",
+        "pub_017",
+        "pub_016"
+      ]
+    },
+    {
+      "id": "syn_17",
+      "description": "Men's performance leggings for training, sold at a budget-friendly price.",
+      "core": "activewear",
+      "priceTier": "value",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_002",
+        "pub_017"
+      ]
+    },
+    {
+      "id": "syn_18",
+      "description": "Technical outerwear for backcountry skiers. Shell jackets start at $650.",
+      "core": "outdoor",
+      "priceTier": "luxury",
+      "priceUsd": 650,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": []
+    },
+    {
+      "id": "syn_19",
+      "description": "Handcrafted Italian leather handbags with an average price of $1,200.",
+      "core": "luxury_accessories",
+      "priceTier": "luxury",
+      "priceUsd": 1200,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": []
+    },
+    {
+      "id": "syn_20",
+      "description": "B2B software for dental practices that automates patient recall workflows.",
+      "core": null,
+      "priceTier": "unknown",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": []
+    },
+    {
+      "id": "syn_21",
+      "description": "We help people feel better.",
+      "core": null,
+      "priceTier": "unknown",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": []
+    },
+    {
+      "id": "syn_22",
+      "description": "A premium subscription box for new cat owners with toys, food samples, and a care guide.",
+      "core": "pet_supplies",
+      "priceTier": "premium",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_007",
+        "pub_009",
+        "pub_018"
+      ]
+    },
+    {
+      "id": "syn_23",
+      "description": "Organic herbal tea made for people looking for a refreshing non-alcoholic drink.",
+      "core": "functional_beverage",
+      "priceTier": "unknown",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_020",
+        "pub_008"
+      ]
+    },
+    {
+      "id": "syn_24",
+      "description": "A premium duvet cover made from breathable linen, with a clean minimalist design.",
+      "core": "bedding",
+      "priceTier": "premium",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_011"
+      ]
+    },
+    {
+      "id": "syn_25",
+      "description": "A natural room diffuser with botanical scents for a calm home.",
+      "core": "home_fragrance",
+      "priceTier": "unknown",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_011",
+        "pub_014"
+      ]
+    },
+    {
+      "id": "syn_26",
+      "description": "Compostable household bags made from plant-based materials as an alternative to disposable plastic.",
+      "core": "household_values",
+      "priceTier": "unknown",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_014",
+        "pub_008",
+        "pub_001"
+      ]
+    },
+    {
+      "id": "syn_27",
+      "description": "Refillable dish soap made with plant-based ingredients for a low-waste kitchen.",
+      "core": "household_values",
+      "priceTier": "unknown",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_014",
+        "pub_008",
+        "pub_001"
+      ]
+    },
+    {
+      "id": "syn_28",
+      "description": "Vet-formulated premium dog food for older dogs, with a focus on joint health.",
+      "core": "pet_food",
+      "priceTier": "premium",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_007",
+        "pub_009"
+      ]
+    },
+    {
+      "id": "syn_29",
+      "description": "Vegan protein snack bites for people who want a convenient afternoon snack.",
+      "core": "snacks",
+      "priceTier": "unknown",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_008",
+        "pub_015",
+        "pub_001"
+      ]
+    },
+    {
+      "id": "syn_30",
+      "description": "A customer retention platform for dental offices. Software connects to scheduling and patient management systems.",
+      "core": null,
+      "priceTier": "unknown",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": []
+    },
+    {
+      "id": "ranker_31",
+      "description": "A subscription of botanical sparkling teas for women aged 30–45 seeking non-alcoholic drinks for social occasions.",
+      "core": "functional_beverage",
+      "priceTier": "unknown",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "female",
+      "relevantPublisherIds": [
+        "pub_020",
+        "pub_008",
+        "pub_001"
+      ]
+    },
+    {
+      "id": "ranker_32",
+      "description": "Value-priced meal replacement bars with oats and plant protein for commuters.",
+      "core": "snacks",
+      "priceTier": "value",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_008",
+        "pub_015",
+        "pub_001"
+      ]
+    },
+    {
+      "id": "ranker_33",
+      "description": "Premium linen pillowcases and duvet covers for a calm, minimalist bedroom.",
+      "core": "bedding",
+      "priceTier": "premium",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_011"
+      ]
+    },
+    {
+      "id": "ranker_34",
+      "description": "Plant-based dishwashing and surface-cleaner refills that help households reduce plastic packaging.",
+      "core": "household_values",
+      "priceTier": "unknown",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_014",
+        "pub_008",
+        "pub_001"
+      ]
+    },
+    {
+      "id": "ranker_35",
+      "description": "Premium recycled-fabric yoga leggings for women who train several times each week.",
+      "core": "activewear",
+      "priceTier": "premium",
+      "priceUsd": null,
+      "targetAge": [
+        25,
+        44
+      ],
+      "targetGender": "female",
+      "relevantPublisherIds": [
+        "pub_002",
+        "pub_017",
+        "pub_016"
+      ]
+    },
+    {
+      "id": "ranker_36",
+      "description": "A subscription for daily vitamins, creatine, and protein for adults focused on strength training.",
+      "core": "supplements",
+      "priceTier": "unknown",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_012",
+        "pub_003",
+        "pub_002"
+      ]
+    },
+    {
+      "id": "ranker_37",
+      "description": "Fragrance-free facial cleanser and moisturizer for people with sensitive skin.",
+      "core": "beauty",
+      "priceTier": "unknown",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_013",
+        "pub_019"
+      ]
+    },
+    {
+      "id": "ranker_38",
+      "description": "A monthly box of durable puppy toys and treats for people adopting their first dog.",
+      "core": "pet_supplies",
+      "priceTier": "unknown",
+      "priceUsd": null,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": [
+        "pub_007",
+        "pub_009",
+        "pub_018"
+      ]
+    },
+    {
+      "id": "ranker_39",
+      "description": "Luxury technical ski shells starting at $900, made for backcountry mountain guides.",
+      "core": "outdoor",
+      "priceTier": "luxury",
+      "priceUsd": 900,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": []
+    },
+    {
+      "id": "ranker_40",
+      "description": "Handmade Italian leather tote bags priced from $1,800 for luxury shoppers.",
+      "core": "luxury_accessories",
+      "priceTier": "luxury",
+      "priceUsd": 1800,
+      "targetAge": null,
+      "targetGender": "unknown",
+      "relevantPublisherIds": []
+    }
+  ]
+}

@@ -1,0 +1,403 @@
+{
+  "generatedAt": "2026-11-13T14:08:14.781783+00:00",
+  "experiment": "logistic regression publisher reranker versus existing hand-tuned score",
+  "labelNotes": "Forty synthetic, manually labeled briefs for an offline publisher-ranking baseline. A listed publisher is a positive match. Any catalog-eligible publisher not listed is treated as a negative for this experiment; this is a judgment label, not outcome data. Structured core, price tier, target age, and gender are explicit brief annotations. Publisher IDs define labels but are not predictive features. No campaign outcomes are represented.",
+  "briefCount": 40,
+  "candidatePairCount": 152,
+  "positivePairCount": 82,
+  "positiveRate": 0.5394736842105263,
+  "briefsWithNoCatalogEligibleCandidates": [
+    "syn_18",
+    "syn_19",
+    "syn_20",
+    "syn_21",
+    "syn_30",
+    "ranker_39",
+    "ranker_40"
+  ],
+  "features": [
+    "catalog-derived fit class and brief category/price tier",
+    "age overlap, income distance, basket-band distance, and price-to-AOV ratio",
+    "publisher reach and AOV",
+    "existing scorer factor impacts and total penalties"
+  ],
+  "evaluation": {
+    "method": "5-fold GroupKFold; all candidates for a brief are held out together. These are held-out synthetic judgments, not campaign outcomes.",
+    "folds": [
+      {
+        "fold": 1,
+        "heldOutBriefs": 7,
+        "cases": [
+          {
+            "caseId": "ranker_33",
+            "rulePrecisionAt5": 0.3333,
+            "logisticPrecisionAt5": 0.3333
+          },
+          {
+            "caseId": "syn_04",
+            "rulePrecisionAt5": 1.0,
+            "logisticPrecisionAt5": 1.0
+          },
+          {
+            "caseId": "syn_05",
+            "rulePrecisionAt5": 0.75,
+            "logisticPrecisionAt5": 0.75
+          },
+          {
+            "caseId": "syn_12",
+            "rulePrecisionAt5": 0.4,
+            "logisticPrecisionAt5": 0.4
+          },
+          {
+            "caseId": "syn_14",
+            "rulePrecisionAt5": 0.2,
+            "logisticPrecisionAt5": 0.2
+          },
+          {
+            "caseId": "syn_25",
+            "rulePrecisionAt5": 0.6667,
+            "logisticPrecisionAt5": 0.6667
+          },
+          {
+            "caseId": "syn_26",
+            "rulePrecisionAt5": 0.75,
+            "logisticPrecisionAt5": 0.75
+          }
+        ]
+      },
+      {
+        "fold": 2,
+        "heldOutBriefs": 7,
+        "cases": [
+          {
+            "caseId": "ranker_32",
+            "rulePrecisionAt5": 1.0,
+            "logisticPrecisionAt5": 1.0
+          },
+          {
+            "caseId": "ranker_34",
+            "rulePrecisionAt5": 0.75,
+            "logisticPrecisionAt5": 0.75
+          },
+          {
+            "caseId": "syn_03",
+            "rulePrecisionAt5": 1.0,
+            "logisticPrecisionAt5": 1.0
+          },
+          {
+            "caseId": "syn_11",
+            "rulePrecisionAt5": 0.4,
+            "logisticPrecisionAt5": 0.4
+          },
+          {
+            "caseId": "syn_13",
+            "rulePrecisionAt5": 0.6,
+            "logisticPrecisionAt5": 0.6
+          },
+          {
+            "caseId": "syn_23",
+            "rulePrecisionAt5": 0.5,
+            "logisticPrecisionAt5": 0.5
+          },
+          {
+            "caseId": "syn_24",
+            "rulePrecisionAt5": 0.3333,
+            "logisticPrecisionAt5": 0.3333
+          }
+        ]
+      },
+      {
+        "fold": 3,
+        "heldOutBriefs": 6,
+        "cases": [
+          {
+            "caseId": "ranker_31",
+            "rulePrecisionAt5": 0.75,
+            "logisticPrecisionAt5": 0.75
+          },
+          {
+            "caseId": "ranker_36",
+            "rulePrecisionAt5": 0.6,
+            "logisticPrecisionAt5": 0.6
+          },
+          {
+            "caseId": "ranker_37",
+            "rulePrecisionAt5": 0.4,
+            "logisticPrecisionAt5": 0.4
+          },
+          {
+            "caseId": "syn_02",
+            "rulePrecisionAt5": 1.0,
+            "logisticPrecisionAt5": 1.0
+          },
+          {
+            "caseId": "syn_10",
+            "rulePrecisionAt5": 0.5,
+            "logisticPrecisionAt5": 0.5
+          },
+          {
+            "caseId": "syn_22",
+            "rulePrecisionAt5": 1.0,
+            "logisticPrecisionAt5": 1.0
+          }
+        ]
+      },
+      {
+        "fold": 4,
+        "heldOutBriefs": 6,
+        "cases": [
+          {
+            "caseId": "ranker_35",
+            "rulePrecisionAt5": 0.6,
+            "logisticPrecisionAt5": 0.4
+          },
+          {
+            "caseId": "syn_01",
+            "rulePrecisionAt5": 0.6667,
+            "logisticPrecisionAt5": 0.6667
+          },
+          {
+            "caseId": "syn_08",
+            "rulePrecisionAt5": 1.0,
+            "logisticPrecisionAt5": 1.0
+          },
+          {
+            "caseId": "syn_09",
+            "rulePrecisionAt5": 0.75,
+            "logisticPrecisionAt5": 0.75
+          },
+          {
+            "caseId": "syn_17",
+            "rulePrecisionAt5": 0.4,
+            "logisticPrecisionAt5": 0.4
+          },
+          {
+            "caseId": "syn_29",
+            "rulePrecisionAt5": 1.0,
+            "logisticPrecisionAt5": 1.0
+          }
+        ]
+      },
+      {
+        "fold": 5,
+        "heldOutBriefs": 7,
+        "cases": [
+          {
+            "caseId": "ranker_38",
+            "rulePrecisionAt5": 1.0,
+            "logisticPrecisionAt5": 1.0
+          },
+          {
+            "caseId": "syn_06",
+            "rulePrecisionAt5": 0.75,
+            "logisticPrecisionAt5": 0.75
+          },
+          {
+            "caseId": "syn_07",
+            "rulePrecisionAt5": 0.3333,
+            "logisticPrecisionAt5": 0.3333
+          },
+          {
+            "caseId": "syn_15",
+            "rulePrecisionAt5": 0.6,
+            "logisticPrecisionAt5": 0.6
+          },
+          {
+            "caseId": "syn_16",
+            "rulePrecisionAt5": 0.6,
+            "logisticPrecisionAt5": 0.6
+          },
+          {
+            "caseId": "syn_27",
+            "rulePrecisionAt5": 0.75,
+            "logisticPrecisionAt5": 0.75
+          },
+          {
+            "caseId": "syn_28",
+            "rulePrecisionAt5": 0.6667,
+            "logisticPrecisionAt5": 0.6667
+          }
+        ]
+      }
+    ],
+    "placementBriefsScored": 33,
+    "precisionAt5": {
+      "handTunedMean": 0.6681818181818182,
+      "logisticRegressionMean": 0.6621212121212121,
+      "handTunedPerBrief": [
+        0.3333333333333333,
+        1.0,
+        0.75,
+        0.4,
+        0.2,
+        0.6666666666666666,
+        0.75,
+        1.0,
+        0.75,
+        1.0,
+        0.4,
+        0.6,
+        0.5,
+        0.3333333333333333,
+        0.75,
+        0.6,
+        0.4,
+        1.0,
+        0.5,
+        1.0,
+        0.6,
+        0.6666666666666666,
+        1.0,
+        0.75,
+        0.4,
+        1.0,
+        1.0,
+        0.75,
+        0.3333333333333333,
+        0.6,
+        0.6,
+        0.75,
+        0.6666666666666666
+      ],
+      "logisticPerBrief": [
+        0.3333333333333333,
+        1.0,
+        0.75,
+        0.4,
+        0.2,
+        0.6666666666666666,
+        0.75,
+        1.0,
+        0.75,
+        1.0,
+        0.4,
+        0.6,
+        0.5,
+        0.3333333333333333,
+        0.75,
+        0.6,
+        0.4,
+        1.0,
+        0.5,
+        1.0,
+        0.4,
+        0.6666666666666666,
+        1.0,
+        0.75,
+        0.4,
+        1.0,
+        1.0,
+        0.75,
+        0.3333333333333333,
+        0.6,
+        0.6,
+        0.75,
+        0.6666666666666666
+      ]
+    },
+    "outOfFoldCalibration": {
+      "brierScore": 0.07621414424875345,
+      "logLoss": 0.27517430663784315,
+      "bins": [
+        {
+          "bin": 1,
+          "count": 31,
+          "meanPredictedProbability": 0.018258116893276638,
+          "observedPositiveRate": 0.03225806451612903
+        },
+        {
+          "bin": 2,
+          "count": 31,
+          "meanPredictedProbability": 0.1303180822742487,
+          "observedPositiveRate": 0.0967741935483871
+        },
+        {
+          "bin": 3,
+          "count": 30,
+          "meanPredictedProbability": 0.6179300398315697,
+          "observedPositiveRate": 0.7
+        },
+        {
+          "bin": 4,
+          "count": 30,
+          "meanPredictedProbability": 0.9697971705206022,
+          "observedPositiveRate": 0.9
+        },
+        {
+          "bin": 5,
+          "count": 30,
+          "meanPredictedProbability": 0.9982724267536134,
+          "observedPositiveRate": 1.0
+        }
+      ],
+      "plot": "reports/synthetic_ranker_calibration.png"
+    }
+  },
+  "fullDataCoefficientSample": {
+    "warning": "Fit on all 40 synthetic briefs for feature inspection only; do not use as model performance evidence or production weights.",
+    "largestAbsoluteStandardizedWeights": [
+      {
+        "feature": "fit=audience",
+        "standardizedLogOddsWeight": -1.655738006729341
+      },
+      {
+        "feature": "fit=shelf",
+        "standardizedLogOddsWeight": 1.655738006729341
+      },
+      {
+        "feature": "log10_monthly_impressions",
+        "standardizedLogOddsWeight": 1.2929466039098185
+      },
+      {
+        "feature": "brief_core=beauty",
+        "standardizedLogOddsWeight": -0.8755922901846961
+      },
+      {
+        "feature": "brief_core=snacks",
+        "standardizedLogOddsWeight": 0.8265708864407887
+      },
+      {
+        "feature": "basket_band_distance",
+        "standardizedLogOddsWeight": -0.7968728444445535
+      },
+      {
+        "feature": "brief_core=home_fragrance",
+        "standardizedLogOddsWeight": 0.6521480073911912
+      },
+      {
+        "feature": "brief_core=functional_beverage",
+        "standardizedLogOddsWeight": 0.5051406651991415
+      },
+      {
+        "feature": "factor_income",
+        "standardizedLogOddsWeight": -0.4962922912504036
+      },
+      {
+        "feature": "income_distance",
+        "standardizedLogOddsWeight": 0.43171102807515455
+      },
+      {
+        "feature": "factor_age",
+        "standardizedLogOddsWeight": 0.33459386710755146
+      },
+      {
+        "feature": "brief_core=activewear",
+        "standardizedLogOddsWeight": -0.33295269582845255
+      },
+      {
+        "feature": "log10_publisher_aov",
+        "standardizedLogOddsWeight": 0.31574305117340806
+      },
+      {
+        "feature": "brief_core=bedding",
+        "standardizedLogOddsWeight": -0.2835445054952902
+      },
+      {
+        "feature": "factor_subscription",
+        "standardizedLogOddsWeight": 0.2781302822462708
+      }
+    ]
+  },
+  "productionUse": false,
+  "caveat": "Synthetic labels encode human judgments from a 20-row mock catalog. The unlisted eligible publishers are treated as negatives. Grouped cross-validation avoids brief leakage but does not create real-world outcome evidence."
+}

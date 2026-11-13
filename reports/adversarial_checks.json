@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-11-13T14:10:12.355331+00:00",
+  "mode": "offline mocked-model guard checks; no API calls",
+  "total": 11,
+  "passed": 11,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "__main__.AdversarialChecks.test_bad_factor_citation_falls_back_for_one_publisher_only",
+      "result": "passed"
+    },
+    {
+      "name": "__main__.AdversarialChecks.test_bad_json_uses_rules_without_crashing",
+      "result": "passed"
+    },
+    {
+      "name": "__main__.AdversarialChecks.test_catalog_direct_shelf_overrides_model_audience_label",
+      "result": "passed"
+    },
+    {
+      "name": "__main__.AdversarialChecks.test_gifter_is_blocked_when_brief_is_not_gifting",
+      "result": "passed"
+    },
+    {
+      "name": "__main__.AdversarialChecks.test_handbag_and_specialized_outdoor_briefs_refuse_without_catalog_fit",
+      "result": "passed"
+    },
+    {
+      "name": "__main__.AdversarialChecks.test_injection_cannot_buy_every_publisher",
+      "result": "passed"
+    },
+    {
+      "name": "__main__.AdversarialChecks.test_invalid_pet_age_is_discarded_without_falling_back",
+      "result": "passed"
+    },
+    {
+      "name": "__main__.AdversarialChecks.test_invented_claims_are_rejected",
+      "result": "passed"
+    },
+    {
+      "name": "__main__.AdversarialChecks.test_missing_api_key_uses_rules_without_crashing",
+      "result": "passed"
+    },
+    {
+      "name": "__main__.AdversarialChecks.test_score_thirty_is_excluded",
+      "result": "passed"
+    },
+    {
+      "name": "__main__.AdversarialChecks.test_six_candidate_publishers_are_capped_at_five",
+      "result": "passed"
+    }
+  ]
+}
